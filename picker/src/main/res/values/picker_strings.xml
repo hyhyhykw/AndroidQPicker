@@ -1,0 +1,25 @@
+<resources>
+    <string name="picker_permission_name_calendar">日历</string>
+    <string name="picker_permission_name_camera">相机</string>
+    <string name="picker_permission_name_contacts">通讯录</string>
+    <string name="picker_permission_name_accounts">手机账号</string>
+    <string name="picker_permission_name_location">位置信息</string>
+    <string name="picker_permission_name_microphone">麦克风</string>
+    <string name="picker_permission_name_phone">电话</string>
+    <string name="picker_permission_name_sensors">身体传感器</string>
+    <string name="picker_permission_name_sms">短信</string>
+    <string name="picker_permission_name_storage">存储空间</string>
+    <string name="picker_str_permission_denied">权限被拒绝</string>
+
+    <string name="picker_message_permission_rationale">使用图片选择功能，App需要以下权限，请允许：\n\n%1$s</string>
+    <string name="picker_message_permission_always_failed">使用图片选择功能，App需要以下权限，请在设置中开启：\n\n%1$s</string>
+    <string name="picker_str_note">注意</string>
+    <string name="picker_str_sure">确定</string>
+    <string name="picker_photo_failure">拍照失败</string>
+    <string name="picker_video_failure">录制失败</string>
+
+    <string name="picker_str_note_content">请最多选择%d张图片，多余的图片会被忽略。部分手机需要长按图片进入多选模式</string>
+    <string name="picker_voip_cpu_error">很抱歉，该功能暂时不支持您的机型</string>
+    <string name="picker_not_remind">不再提示</string>
+    <string name="picker_str_waiting">请稍后&#8230;</string>
+</resources>

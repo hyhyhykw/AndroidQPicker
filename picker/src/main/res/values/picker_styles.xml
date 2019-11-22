@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="PickerCameraTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="PickerCropTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@android:color/black</item>
+        <item name="colorPrimaryDark">@android:color/black</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="actionBarSize">45dp</item>
+        <item name="android:actionBarSize">45dp</item>
+    </style>
+
+    <declare-styleable name="PickerLikeQQCropView">
+        <!--遮罩颜色-->
+        <attr name="pickerBgColor" format="color" />
+        <attr name="pickerMaskColor" format="color" />
+        <attr name="pickerBorderColor" format="color" />
+        <attr name="pickerRadius" format="dimension" />
+        <attr name="pickerMaxScale" format="float" />
+        <attr name="pickerDoubleClickScale" format="float" />
+    </declare-styleable>
+</resources>

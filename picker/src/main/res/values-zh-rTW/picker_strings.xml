@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="picker_permission_name_calendar">日曆</string>
+    <string name="picker_permission_name_camera">相機</string>
+    <string name="picker_permission_name_contacts">通訊錄</string>
+    <string name="picker_permission_name_accounts">手機賬號</string>
+    <string name="picker_permission_name_location">位置資訊</string>
+    <string name="picker_permission_name_microphone">麥克風</string>
+    <string name="picker_permission_name_phone">電話</string>
+    <string name="picker_permission_name_sensors">身體感測器</string>
+    <string name="picker_permission_name_sms">簡訊</string>
+    <string name="picker_permission_name_storage">儲存空間</string>
+    <string name="picker_str_permission_denied">許可權被拒絕</string>
+
+    <string name="picker_photo_failure">拍照失敗</string>
+    <string name="picker_video_failure">錄製失敗</string>
+    <string name="picker_voip_cpu_error">很抱歉，該功能暫時不支援您的機型</string>
+    <string name="picker_message_permission_rationale">使用圖片選擇功能，App需要以下許可權，請允許：\n\n%1$s</string>
+    <string name="picker_message_permission_always_failed">使用圖片選擇功能，App需要以下許可權，請在設定中開啟：\n\n%1$s</string>
+    <string name="picker_str_note">注意</string>
+    <string name="picker_str_sure">確定</string>
+    <string name="picker_str_note_content">請最多選擇%d張圖片，多餘的圖片會被忽略。部分手機需要長按圖片進入多選模式</string>
+    <string name="picker_not_remind">不再提示</string>
+    <string name="picker_str_waiting">請稍後&#8230;</string>
+</resources>

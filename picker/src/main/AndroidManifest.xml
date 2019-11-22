@@ -1,0 +1,34 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hy.picker">
+
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application>
+
+
+        <activity
+            android:name=".PickerResultActivity"
+            android:theme="@style/PickerCameraTheme" />
+
+        <activity
+            android:name=".OpenCameraResultActivity"
+            android:theme="@style/PickerCameraTheme" />
+
+        <provider
+            android:name=".MyFileProvider"
+            android:authorities="${applicationId}.picker.file_provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/picker_q_file_paths" />
+        </provider>
+
+        <activity
+            android:name=".PickerCropActivity"
+            android:theme="@style/PickerCropTheme" />
+    </application>
+</manifest>

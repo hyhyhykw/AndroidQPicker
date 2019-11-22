@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="picker_dlg_chb" type="id" />
+    <item name="picker_like_view" type="id" />
+    <item name="picker_back" type="id" />
+    <item name="picker_done" type="id" />
+</resources>

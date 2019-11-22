@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@id/picker_dlg_chb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?attr/dialogPreferredPadding"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="?attr/dialogPreferredPadding"
+        android:text="@string/picker_not_remind" />
+</LinearLayout>
