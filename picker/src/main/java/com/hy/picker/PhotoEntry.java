@@ -3,6 +3,8 @@ package com.hy.picker;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.Objects;
+
 import androidx.annotation.NonNull;
 
 /**
@@ -117,6 +119,24 @@ public class PhotoEntry implements Parcelable {
 
     public void setOriginal(String original) {
         this.original = original;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PhotoEntry that = (PhotoEntry) o;
+        return width == that.width &&
+                height == that.height &&
+                size == that.size &&
+                Objects.equals(path, that.path) &&
+                Objects.equals(mimeType, that.mimeType) &&
+                Objects.equals(filename, that.filename);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(width, height, size, path, mimeType, filename);
     }
 
     @Override
