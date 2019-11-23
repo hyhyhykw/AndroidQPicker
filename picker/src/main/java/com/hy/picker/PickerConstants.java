@@ -6,11 +6,18 @@ package com.hy.picker;
  * @author HY
  */
 public interface PickerConstants {
-    //单选
+    //选图片
     int REQUEST_PICK = 0x01;
 
     //单选
     int REQUEST_CAMERA = 0x02;
+
+    //拍视频
+    int REQUEST_CAMERA_VIDEO = 0x07;
+
+    //选视频
+    int REQUEST_PICK_VIDEO = 0x06;
+
     //存储权限
     int PICKER_PERMISSION_STORAGE = 0x03;
 
@@ -20,8 +27,7 @@ public interface PickerConstants {
     //裁剪
     int PICKER_CROP = 0x05;
 
-    //裁剪action
-    String ACTION_CROP = "com.android.camera.action.CROP";
+
     //数量
     String PICK_NUMBER = "com.hy.picker.PICK_NUMBER";
 

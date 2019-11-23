@@ -87,8 +87,12 @@ public final class AndroidQPicker implements PickerConstants {
                         .putExtra(CROP, crop)
                         .putExtra(CROP_CIRCLE, cropCircle)
                         .putExtra(PICK_VIDEO, video),
-                REQUEST_PICK
+                video ? REQUEST_PICK_VIDEO : REQUEST_PICK
         );
+    }
+
+    public static boolean isVideo(int requestCode) {
+        return REQUEST_PICK_VIDEO == requestCode || requestCode == REQUEST_CAMERA_VIDEO;
     }
 
 
@@ -99,7 +103,7 @@ public final class AndroidQPicker implements PickerConstants {
                         .putExtra(PICK_VIDEO, video)
                         .putExtra(CROP_CIRCLE, cropCircle)
                         .putExtra(CROP, crop),
-                REQUEST_CAMERA
+                video ? REQUEST_CAMERA_VIDEO : REQUEST_CAMERA
         );
     }
 
