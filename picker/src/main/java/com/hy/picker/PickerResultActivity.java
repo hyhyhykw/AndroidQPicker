@@ -44,6 +44,7 @@ public class PickerResultActivity extends AppCompatActivity implements PickerCon
         Intent data = getIntent();
         video = data.getBooleanExtra(PICK_VIDEO, false);
         number = data.getIntExtra(PICK_NUMBER, 1);
+        cropRadius = data.getIntExtra(PICKER_CROP_RADIUS, -1);
         crop = data.getBooleanExtra(CROP, false);
         cropCircle = data.getBooleanExtra(CROP_CIRCLE, false);
         if (!video) {
@@ -71,6 +72,7 @@ public class PickerResultActivity extends AppCompatActivity implements PickerCon
     }
 
     private int number;
+    private int cropRadius;
     private boolean gif;
     private boolean gifOnly;
     private boolean video;
@@ -207,8 +209,9 @@ public class PickerResultActivity extends AppCompatActivity implements PickerCon
 
                     Intent intent = new Intent(this, PickerCropActivity.class)
                             .putExtra(CROP_CIRCLE, cropCircle)
+                            .putExtra(PICKER_CROP_RADIUS, cropRadius)
                             .putExtra(ORIGINAL, photos.get(0).getPath());
-                    startActivityForResult(intent,PICKER_CROP);
+                    startActivityForResult(intent, PICKER_CROP);
                 });
                 AppUtils.postDelay(() -> mProgressDialog.cancel(), 200);
             });

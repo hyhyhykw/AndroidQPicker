@@ -3,8 +3,8 @@
 
     <style name="PickerCameraTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorPrimary">#ff212121</item>
+        <item name="colorPrimaryDark">#ff212121</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:background">@android:color/transparent</item>
         <item name="android:windowFullscreen">true</item>

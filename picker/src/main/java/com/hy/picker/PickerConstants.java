@@ -55,6 +55,8 @@ public interface PickerConstants {
     //是否显示提示弹窗
     String PICKER_SHOW_HINT_DLG = "picker_show_hint_dlg";
 
+    //裁剪半径
+    String PICKER_CROP_RADIUS="com.hy.picker.CROP_RADIUS";
 
     //文件拷贝目录
     String COPY_DIR = "pickerImageCopy";

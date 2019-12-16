@@ -44,6 +44,7 @@ public class OpenCameraResultActivity extends AppCompatActivity implements Picke
     private boolean video;
     private boolean crop;
     private boolean cropCircle;
+    private int cropRadius;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,6 +55,7 @@ public class OpenCameraResultActivity extends AppCompatActivity implements Picke
         video = intent.getBooleanExtra(PICK_VIDEO, false);
         crop = intent.getBooleanExtra(CROP, false);
         cropCircle = intent.getBooleanExtra(CROP_CIRCLE, false);
+        cropRadius = intent.getIntExtra(PICKER_CROP_RADIUS, -1);
         if (EasyPermissions.hasPermissions(this, Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE)) {
             requestCamera();
         } else {
@@ -93,8 +95,9 @@ public class OpenCameraResultActivity extends AppCompatActivity implements Picke
                 if (!video && crop) {//裁剪
                     Intent intent = new Intent(this, PickerCropActivity.class)
                             .putExtra(CROP_CIRCLE, cropCircle)
+                            .putExtra(PICKER_CROP_RADIUS, cropRadius)
                             .putExtra(ORIGINAL, file.getAbsolutePath());
-                    startActivityForResult(intent,PICKER_CROP);
+                    startActivityForResult(intent, PICKER_CROP);
                     return;
                 }
                 getPhoto(file);

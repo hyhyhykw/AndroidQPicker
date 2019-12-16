@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".PickerCropActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".PickerCropActivity">
 
 
     <RelativeLayout
@@ -34,8 +34,8 @@
 
     <com.hy.picker.crop.PickerLikeQQCropView
         android:id="@id/picker_like_view"
-        app:pickerBgColor="@android:color/transparent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/picker_crop_texture" />
+        android:background="@drawable/picker_crop_texture"
+        app:pickerBgColor="@android:color/transparent" />
 </LinearLayout>

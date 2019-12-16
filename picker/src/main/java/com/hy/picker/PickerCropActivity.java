@@ -7,6 +7,7 @@ import android.os.Environment;
 import android.os.Looper;
 
 import com.hy.picker.crop.PickerLikeQQCropView;
+import com.hy.utils.AppUtils;
 import com.hy.utils.Logger;
 
 import java.io.File;
@@ -30,6 +31,7 @@ public class PickerCropActivity extends AppCompatActivity implements PickerConst
     private String filepath;
 
     private boolean cropCircle;
+    private int cropRadius;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -41,6 +43,7 @@ public class PickerCropActivity extends AppCompatActivity implements PickerConst
 
         cropCircle = intent.getBooleanExtra(CROP_CIRCLE, false);
         filepath = intent.getStringExtra(ORIGINAL);
+        cropRadius = intent.getIntExtra(PICKER_CROP_RADIUS, -1);
 
         findViewById(R.id.picker_back).setOnClickListener(v -> onBackPressed());
 
@@ -49,8 +52,9 @@ public class PickerCropActivity extends AppCompatActivity implements PickerConst
             saveBitmap(bitmap);
         });
 
+
         Looper.myQueue().addIdleHandler(() -> {
-            init();
+            AppUtils.post(this::init);
             return false;
         });
     }
@@ -119,13 +123,21 @@ public class PickerCropActivity extends AppCompatActivity implements PickerConst
     }
 
     private void init() {
-        likeView.setBitmapForWidth(filepath, 800);
+        likeView.setBitmapForWidth(filepath, 1080);
+        float radius = likeView.getClipWidth() / 2;
 
         if (cropCircle) {
-            likeView.setRadius(likeView.getClipWidth() / 2);
-        } else {
-            likeView.setRadius(0);
+            likeView.setRadius(radius);
+            return;
         }
+
+        if (cropRadius == -1) {
+            likeView.setRadius(0);
+        } else {
+//            int dp = SizeUtils.dp2px(this, cropRadius);
+            likeView.setRadius(Math.min(radius,cropRadius));
+        }
+
     }
 
 

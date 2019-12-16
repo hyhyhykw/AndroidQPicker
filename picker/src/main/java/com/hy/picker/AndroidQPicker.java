@@ -40,6 +40,9 @@ public final class AndroidQPicker implements PickerConstants {
 
     //数量
     private final int number;
+
+    //裁剪半径
+    private final int cropRadius;
     //是否选择gif
     private final boolean gif;
     //是否只选择gif
@@ -55,7 +58,9 @@ public final class AndroidQPicker implements PickerConstants {
                            boolean gif,
                            boolean onlyGif,
                            boolean video,
-                           boolean crop, boolean cropCircle) {
+                           boolean crop,
+                           boolean cropCircle,
+                           int cropRadius) {
         this.number = number;
         this.gif = gif;
         this.onlyGif = onlyGif;
@@ -63,6 +68,7 @@ public final class AndroidQPicker implements PickerConstants {
         this.crop = crop;
 
         this.cropCircle = cropCircle;
+        this.cropRadius=cropRadius;
     }
 
     public AndroidQPicker(Builder builder) {
@@ -71,7 +77,8 @@ public final class AndroidQPicker implements PickerConstants {
                 builder.onlyGif,
                 builder.video,
                 builder.crop,
-                builder.cropCircle);
+                builder.cropCircle,
+                builder.cropRadius);
     }
 
     public static Builder newBuilder() {
@@ -86,6 +93,7 @@ public final class AndroidQPicker implements PickerConstants {
                         .putExtra(GIF_ONLY, onlyGif)
                         .putExtra(CROP, crop)
                         .putExtra(CROP_CIRCLE, cropCircle)
+                        .putExtra(PICKER_CROP_RADIUS, cropRadius)
                         .putExtra(PICK_VIDEO, video),
                 video ? REQUEST_PICK_VIDEO : REQUEST_PICK
         );
@@ -102,6 +110,7 @@ public final class AndroidQPicker implements PickerConstants {
                 new Intent(activity, OpenCameraResultActivity.class)
                         .putExtra(PICK_VIDEO, video)
                         .putExtra(CROP_CIRCLE, cropCircle)
+                        .putExtra(PICKER_CROP_RADIUS, cropRadius)
                         .putExtra(CROP, crop),
                 video ? REQUEST_CAMERA_VIDEO : REQUEST_CAMERA
         );
@@ -117,7 +126,15 @@ public final class AndroidQPicker implements PickerConstants {
         private boolean video = false;
         private boolean crop = false;
 
+        private int cropRadius;
+
+
         private Builder() {
+        }
+
+        public Builder cropRadius(int cropRadius) {
+            this.cropRadius = cropRadius;
+            return this;
         }
 
         public Builder number(@IntRange(from = 1) int number) {

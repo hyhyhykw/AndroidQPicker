@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         AndroidQPicker.newBuilder()
                 .number(1)
                 .crop()
-                .cropCircle()
+                .cropRadius(20)
                 .openCamera(this);
     }
 
