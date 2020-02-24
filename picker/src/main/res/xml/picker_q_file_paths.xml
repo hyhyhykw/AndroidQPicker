@@ -4,43 +4,47 @@
     <!--代表app 私有的存储区域 Context.getCacheDir()目录下的images目录 -->
     <!-- /data/user/0/你的包名/cache-->
 
+    <external-path
+        name="external"
+        path="." />
+
     <!-- pictures path -->
     <files-path
-        name="picker_pictures"
-        path="Pictures"/>
+        name="files"
+        path="."/>
 
-    <!-- movies path -->
-    <files-path
-        name="picker_movies"
-        path="Movies"/>
+<!--    &lt;!&ndash; movies path &ndash;&gt;-->
+<!--    <files-path-->
+<!--        name="picker_movies"-->
+<!--        path="Movies"/>-->
 
     <!-- thumbs path -->
     <cache-path
-        name="picker_thumbs"
-        path="VideoThumbs"/>
+        name="caches"
+        path="."/>
     <!--copy path-->
-    <cache-path
-        name="picker_copies"
-        path="pickerImageCopy"/>
+<!--    <cache-path-->
+<!--        name="picker_copies"-->
+<!--        path="pickerImageCopy"/>-->
 
     <!-- pictures path -->
     <external-files-path
-        name="picker_external_pictures"
-        path="Pictures"/>
+        name="external_files"
+        path="."/>
 
 
-    <!-- movies path -->
-    <external-files-path
-        name="picker_external_movies"
-        path="Movies"/>
+<!--    &lt;!&ndash; movies path &ndash;&gt;-->
+<!--    <external-files-path-->
+<!--        name="picker_external_movies"-->
+<!--        path="Movies"/>-->
 
-    <!-- thumbs path -->
-    <external-cache-path
-        name="picker_external_thumbs"
-        path="VideoThumbs"/>
+<!--    &lt;!&ndash; thumbs path &ndash;&gt;-->
+<!--    <external-cache-path-->
+<!--        name="picker_external_thumbs"-->
+<!--        path="VideoThumbs"/>-->
     <!--copy path-->
     <external-cache-path
-        name="picker_external_copies"
-        path="pickerImageCopy"/>
+        name="external_cache"
+        path="."/>
 
 </paths>
